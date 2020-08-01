@@ -18,6 +18,8 @@ app.use("/api/triprequest", require("./routes/api/triprequest"));
 app.use("/api/selleraccount", require("./routes/api/selleraccount"));
 app.use("/api/tourpackage", require("./routes/api/tourpackage"));
 app.use("/api/backpack", require("./routes/api/backpack"));
+app.use("/api/packages", require("./routes/api/packages"));
+app.use("/api/filter", require("./routes/api/filter"));
 
 
 const PORT = process.env.PORT || 5500;

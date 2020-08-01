@@ -31,6 +31,15 @@ const PackageSchema = new mongoose.Schema({
     default: 0
     },
 
+    visited: {    
+    type: Number,
+    default: 0
+    },
+
+    price: {
+        type: Number
+    }
+
 })
 
 module.exports = Package = mongoose.model("Package Details", PackageSchema)
