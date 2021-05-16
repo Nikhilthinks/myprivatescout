@@ -45,6 +45,7 @@ router.post(
       }
 
       const isMatch = await bcrypt.compare(password, user.password);
+      res.json({user});
 
       if (!isMatch) {
         return res
@@ -65,7 +66,6 @@ router.post(
         (err, token) => {
           if (err) throw err;
           res.json({ token });
-          res.json({user})
         }
       );
     } catch (err) {
