@@ -1,13 +1,12 @@
 const express = require("express");
 const connectDB = require("./config/db");
+var cors = require("cors");
 
 connectDB();
 
 const app = express();
 
-app.use(express.json({ extended: false }));
-
-app.get("/", (req, res) => res.send("API Running"));
+app.use(cors({ origin: true, credentials: true }));
 
 // Adding headers
 app.use(function (req, res, next) {
@@ -29,6 +28,10 @@ app.use(function (req, res, next) {
     next();
 });
 
+app.use(express.json({ extended: false }));
+
+app.get("/", (req, res) => res.send("API Running"));
+
 app.use("/api/users", require("./routes/api/users"));
 app.use("/api/profile", require("./routes/api/profile"));
 app.use("/api/auth", require("./routes/api/auth"));
@@ -41,7 +44,10 @@ app.use("/api/backpack", require("./routes/api/backpack"));
 app.use("/api/packages", require("./routes/api/packages"));
 app.use("/api/filter", require("./routes/api/filter"));
 
-
 const PORT = process.env.PORT || 5500;
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+}
 
 app.listen(PORT, () => console.log(`Server is hot & live at port ${PORT}`));
