@@ -12,6 +12,7 @@ router.get("/", auth, async (req, res) => {
   try {
     const user = await User.findById(req.user.id).select("-password");
     res.json(user);
+    console.log('user',user)
   } catch (err) {
     console.error(err.message);
     res.status(500).send("Server Fucked Up");
@@ -22,21 +23,20 @@ router.post(
   "/",
   [
     // check("email", "Please enter your email").isEmail(),
-    check("username", "Please enter your username").exists(),
+    check("email", "Please enter your username").exists(),
     check("password", "Password required").exists()
     
   ],
   async (req, res) => {
-    // console.log(req.body);
+     console.log(req.body);
 
     const errors = validationResult(req);
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { username, password } = req.body;
-
+    const { email, password } = req.body;
     try {
-      let user = await User.findOne({ username });
+      let user = await User.findOne({ email });
 
       if (!user) {
         return res
@@ -65,6 +65,7 @@ router.post(
         (err, token) => {
           if (err) throw err;
           res.json({ token });
+          console.log('token',token)
         }
       );
     } catch (err) {

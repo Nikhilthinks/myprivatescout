@@ -37,19 +37,32 @@ router.post(
 
 // For Private Profiles
 
+router.get("/follower", auth ,async (req,res) => {
+  try {
+    const user = await User.findById(req.user.id),
+    follower = user.followers
+    res.json(follower)
+  } catch (err) {
+    console.error(err.message);
+    res.status(500).send("Server Fucked Up");
+  }
+})
+
 router.get("/", auth, async (req, res) => {
   try {
     // const posts = await Post.find({user :}).sort({ date: -1 });
-
+    const userSearch = await User.findById(req.user.id)
      const posts = await Post.aggregate([
        {
          $lookup: {
            from: "users",
            localField: "user",
-           foreignField: "following.user",
-           as: "following",
+           foreignField: "followers.user",
+           as: "followers"
          },
-       },
+       },{ $unset: [ "followers.password", "followers.followers", "followers.following" ] }, 
+       { $unwind : "$followers" }
+      ,{$match: {'followers.username' : userSearch.username }}
         //  {
         //    $group: {
         //      _id : '$user',

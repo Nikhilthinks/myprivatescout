@@ -1,43 +1,39 @@
 import React, { Fragment, useEffect } from "react";
-import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import "./App.css";
-import Navbar from "./components/layout/Navbar.js";
-import Landing from "./components/layout/Landing.js";
-import Register from "./components/auth/Register.js";
-import Login from "./components/auth/Login.js";
-import Alert from "./components/layout/Alert";
-import "bootstrap/dist/css/bootstrap.min.css";
-
-// Redux
 import { Provider } from "react-redux";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import logo from "./logo.svg";
+import Package from "./components/package";
+import AuthForm from "./components/authform";
 import store from "./store";
-import { loadUser } from "./actions/auth";
-import setAuthToken from "./utils/setAuthToken";
+import Dashboard from "./components/dashboard/dashboard";
+import PrivateRoute from "./components/PrivateRoute";
+import {UserLoad} from "./actions/auth"
+import setAuthToken from './utils/setAuthToken'
+import Store from "./components/storeHome/store";
 
-if (localStorage.token) {
+
+if(localStorage.token) {
   setAuthToken(localStorage.token);
 }
 
-const App = () => {
-  useEffect(() => {
-    store.dispatch(loadUser());
-  }, []);
-
+function App() {
+  useEffect(()=>{
+    store.dispatch(UserLoad())
+  })
   return (
     <Provider store={store}>
       <Router>
-        <Fragment>
-          <Navbar />
-          <Route exact path='/' component={Landing} />
-          <Alert />
+        <Fragment className="App">
+          <Route exact path="/package" component={Package} />
           <Switch>
-            <Route exact path='/register' component={Register} />
-            <Route exact path='/login' component={Login} />
+          <Route exact path="/auth" component={AuthForm} />
+          <Route exact path="/" component={Store} />
+          <PrivateRoute exact path="/dashboard" component={Dashboard} />
           </Switch>
         </Fragment>
       </Router>
     </Provider>
   );
-};
+}
 
 export default App;

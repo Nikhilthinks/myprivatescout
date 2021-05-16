@@ -1,10 +1,12 @@
 const express = require("express");
 const connectDB = require("./config/db");
+var cors = require("cors");
 
 connectDB();
 
 const app = express();
 
+app.use(cors({ origin: true, credentials: true }));
 app.use(express.json({ extended: false }));
 
 app.get("/", (req, res) => res.send("API Running"));
@@ -18,8 +20,13 @@ app.use("/api/triprequest", require("./routes/api/triprequest"));
 app.use("/api/selleraccount", require("./routes/api/selleraccount"));
 app.use("/api/tourpackage", require("./routes/api/tourpackage"));
 app.use("/api/backpack", require("./routes/api/backpack"));
-
+app.use("/api/packages", require("./routes/api/packages"));
+app.use("/api/filter", require("./routes/api/filter"));
 
 const PORT = process.env.PORT || 5500;
+
+if(process.env.NODE_ENV === 'production') {
+    app.use(express.static('client/build'))
+}
 
 app.listen(PORT, () => console.log(`Server is hot & live at port ${PORT}`));

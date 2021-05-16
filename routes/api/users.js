@@ -15,8 +15,6 @@ router.post(
     check("password", "Enter a password with 6 or more characters").isLength({
       min: 6,
     }),
-    check("username", "Use a unique username for unique you.").not().isEmpty(),
-    check("roles", "Select an account type").not().isEmpty(),
   ],
   async (req, res) => {
     // console.log(req.body);
@@ -25,10 +23,10 @@ router.post(
     if (!errors.isEmpty()) {
       return res.status(400).json({ errors: errors.array() });
     }
-    const { name, email , username, password, roles } = req.body;
+    const { name, email, password } = req.body;
 
     try {
-      let user = await User.findOne({ email, username });
+      let user = await User.findOne({ email });
 
       if (user) {
         return res
@@ -44,11 +42,9 @@ router.post(
 
       user = new User({
         name,
-        email:  email.toLowerCase(),
-        username: username.toLowerCase(),
+        email: email.toLowerCase(),
         avatar,
         password,
-        roles,
       });
 
       const salt = await bcrypt.genSalt(10);
@@ -65,7 +61,7 @@ router.post(
       jwt.sign(
         payload,
         config.get("jwtSecret"),
-        { expiresIn: 360000 },
+        { expiresIn: 3600 },
         (err, token) => {
           if (err) throw err;
           res.json({ token });

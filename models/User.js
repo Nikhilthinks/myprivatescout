@@ -10,10 +10,10 @@ const userSchema = new mongoose.Schema({
     unique: true,
   },
 
-  phone: {
-    type: String,
-    unique: true
-  },
+  // phone: {
+  //   type: String,
+  //   unique: true
+  // },
 
   // Country: {
   //   Type: String
@@ -24,11 +24,11 @@ const userSchema = new mongoose.Schema({
   // },
   // Create a list of countries and their respective cities for this field, this will be an optional feature to add country and city
 
-  username: {
-    type: String,
-    required: true,
-    unique: true,
-  },
+  // username: {
+  //   type: String,
+  //   required: true,
+  //   unique: true,
+  // },
 
   password: {
     type: String,
@@ -57,11 +57,11 @@ const userSchema = new mongoose.Schema({
     },
   ],
 
-  roles: {
-    type: String,
-    enum : ['user', 'agent', 'superuser'],
-    required: true
-  },
+  // roles: {
+  //   type: String,
+  //   enum : ['user', 'agent', 'superuser'],
+  //   required: true
+  // },
 
   bucketTripName: {
   type: String

@@ -1,0 +1,339 @@
+
+.storeHome {
+  display: flex;
+}
+
+.carouselHome {
+  width: 68.2%;
+  margin-left: 10px;
+  margin-top: 20px;
+  z-index: 10 !important;
+}
+
+.sideMenu {
+  margin-top: 8px;
+}
+
+.slideInfo {
+  height: 100px;
+  z-index: 1000 !important;
+  margin-top: -100px;
+  background-blend-mode: color-burn;
+  color: black;
+}
+
+.carousel-control-prev .carousel-control-next {
+  position: fixed;
+  z-index: 10 !important;
+}
+
+.MainNav {
+  position: -webkit-sticky;
+  position: sticky;
+  top: 0;
+  display: -ms-grid;
+  display: grid;
+  z-index: 10000;
+  height: 63px;
+  background: white;
+}
+
+.navbar-menu {
+  margin-top: 15px;
+  float: right;
+  z-index: 10000;
+  color: rgb(14, 4, 160);
+  font-weight: 400;
+}
+
+.search-box {
+  margin-top: 0px;
+  position: absolute;
+}
+
+.navbarBox {
+  position: -webkit-sticky;
+  position: sticky;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: var(--nav-size);
+  background-color: var(--bg);
+  padding-left: 60px;
+  padding-right: 40px;
+  border-bottom: 2px solid orange;
+  z-index: 10000;
+  max-width: 100%;
+  max-height: 100%;
+  -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 1px #ccc;
+}
+
+ul {
+  list-style: none;
+  gap: 5px;
+}
+
+.logo-box {
+  margin-top: 10px;
+  float: left;
+  z-index: 10000;
+  height: 50px;
+}
+
+.upcomingTours {
+  width: 24.5%;
+  height: 450px;
+  margin-top: 18px;
+  margin-left: 10px;
+  border: 1px solid#23d632;
+  border-top-right-radius: 3%;
+  border-top-left-radius: 3%;
+  border-bottom-left-radius: 3%;
+  border-bottom-right-radius: 3%;
+  -webkit-box-shadow: -1px -1px 5px -1px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: -1px 1px 5px 1px #ccc;
+
+}
+
+/* width */
+.upcomingList::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  border-radius: 5px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(190, 179, 228); 
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+
+  background: rgb(166, 153, 214);
+}
+
+.infoBar {
+  width: 98.6%;
+  height: 180px;
+  margin-top: 20px;
+  margin-left: 10px;
+}
+
+.packageShowCase {
+  width: 98.6%;
+  height: 350px;
+  background: pink;
+  margin-top: 10px;
+  margin-left: 10px;
+  display: inline-flexbox;
+}
+
+
+.pkgCardDiv {
+  background-color: white;
+  height: 350px;
+  width: 260px;
+  margin: 0px 5px;
+  margin-top: 10px;
+  margin-bottom: 5px;
+  border-radius: 8px;
+  border-style: solid;
+  border-color: white;
+  z-index: 10;
+  -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 3px 3px 5px 1px #ccc;
+  display: inline-block;
+}
+
+.pkgHead {
+  height: 12%;
+  border-bottom-color: #ccc;
+  border-top-color: transparent;
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  z-index: 10;
+  border-radius: 0px;
+}
+
+
+.pkgBody {
+  height: 65%;
+  z-index: 10;
+  margin-top: 0px;
+  border-radius: 0px;
+  z-index: 500;
+  width: 256px;
+}
+
+.pkgInfo {
+  position: absolute;
+  border-radius: inherit;
+  border-top-left-radius: unset;
+  border-top-right-radius: unset;
+  height: 80px;
+  z-index: 10;
+  width: 256px;
+  --color: white;
+  border-bottom-color: transparent;
+  border-top-color: rgba(204, 204, 204, 0.504);
+  border-right-color: transparent;
+  border-left-color: transparent;
+  border-style: solid;
+  border-width: 1px;
+  -webkit-transition: all 0.4s ease;
+  transition: all 0.4s ease;
+  background-color: white;
+  overflow: hidden;
+  line-height: 17px;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.pkgInfo:hover,
+.pkgInfo:focus-within {
+  position: absolute;
+  -webkit-transform: translateY(-75px);
+  transform: translateY(-75px);
+  height: 150px;
+  z-index: 10;
+  background-color: white;
+  border-bottom-left-radius: unset;
+  border-bottom-right-radius: unset;
+  overflow-wrap: normal;
+}
+
+.swiper-button-next {
+  color: blue;
+  border-radius: 50%;
+  background-color: rgba(255, 228, 196, 0.479);
+  width: 60px;
+  height: 60px;
+  filter: brightness(90%);
+}
+
+.swiper-button-next:hover {
+
+  filter: brightness(100%);
+}
+
+.swiper-button-prev {
+  color: blue;
+  border-radius: 50%;
+  background-color: rgba(255, 228, 196, 0.479);
+  width: 60px;
+  height: 60px;
+  margin-left: -5px;
+  filter: brightness(90%);
+}
+
+.swiper-button-prev:hover {
+
+  filter: brightness(100%);
+}
+
+#main {
+  padding-left: 2%;
+  margin-bottom: 30px;
+  height: 365px;
+  margin-top: 30px;
+
+}
+
+.snippet {
+  display: grid;
+  grid-template-columns: 15% 60% 20%;
+  padding-top: 10px;
+}
+
+.logoSnippet {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background-color: blueviolet;
+  padding-top: 10px;
+}
+
+.packageSnippetTitle {
+  font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+  font-size: larger;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin-left: 4px;
+}
+.vendorName {
+  font-size: medium;
+  color: gray;
+  font-style: italic;
+  padding-left: 8px;
+}
+.snippetRating {
+  margin-top: 8px;
+}
+.borderBottom {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+  border-bottom: 1px solid #23d632;
+  margin-top: 7px;
+}
+
+.snippetDate {
+  margin-left: 10px;
+}
+
+.upcomingTourTitle {
+  width: inherit;
+  height: 50px;
+  border-bottom: 1px solid #23d632;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: x-large;
+  padding-top: 5px;
+  -webkit-box-shadow: 1px 1px 3px 1px #ccc;
+  /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+  /* Firefox 3.5 - 3.6 */
+  box-shadow: 1px 1px 3px 1px #ccc;
+  z-index: 1000;
+  position: absolute;
+  background-color: white;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  padding-left: 90px;
+}
+
+.upcomingList {
+  padding-left: 10px;
+  z-index: 1;
+  margin-top: 50px;
+  height: 398px;
+  overflow-y: scroll;
+  overflow-x: hidden;
+}
+.footer {
+  width: 100%;
+  height: 38px;
+  background-color:#012b73;
+  border-top: solid 2px orangered;
+  color: white;
+}
+
+.socialFooter:hover {
+filter: brightness(80%);
+}

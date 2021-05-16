@@ -10,6 +10,8 @@ router.put("/f/:id", auth, async (req, res) => {
 
     // Checking if the user has already been liked
 
+    
+
     if (
       user.followers.filter(
         (follower) => follower.user.toString() === req.user.id

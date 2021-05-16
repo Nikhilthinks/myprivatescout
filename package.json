@@ -1,12 +1,15 @@
 {
   "name": "practicesocial",
   "version": "1.0.0",
-  "description": "Hi, I hope you are from team Warikoo </br>\r </br>\r I am making a social media backend which is capable to serve various needs depending upon the application, the purpose was to create a portal for my juniors who want to start their own starup and want to connect and make a team with other fellow students in college.",
+  "description": "dent in universe",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
     "server": "nodemon server.js",
     "client": "npm start --prefix client",
+    "build": "cd client && npm run buld",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
     "dev": "concurrently \"npm run server\" \"npm run client\""
   },
   "author": "Nikhil",
@@ -17,13 +20,18 @@
     "bootstrap": "^4.5.0",
     "bootstrap-react": "^0.3.1",
     "config": "^3.3.1",
+    "cors": "^2.8.5",
     "express": "^4.17.1",
     "express-validator": "^6.6.0",
     "gravatar": "^1.8.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.25",
     "passport": "^0.4.1",
+    "react-script-tag": "^1.1.2",
     "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "12.18.2"
   },
   "devDependencies": {
     "concurrently": "^5.2.0",

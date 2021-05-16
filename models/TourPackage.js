@@ -1,9 +1,9 @@
 const mongoose = require('mongoose')
 const PackageSchema = new mongoose.Schema({
     sellerId: {
-         type: mongoose.Schema.Types.ObjectId
-        },
-        
+        type: mongoose.Schema.Types.ObjectId
+    },
+
     productName: {
         type: String
     },
@@ -25,11 +25,21 @@ const PackageSchema = new mongoose.Schema({
         type: Date,
         default: Date.now
     },
-    
-    bookings : {
-    type: Number,
-    default: 0
+
+    bookings: {
+        type: Number,
+        default: 0
     },
+
+    visited: {
+        type: Number,
+        default: 0
+    },
+    image:
+        {
+            data: Buffer,
+            contentType: String
+        }
 
 })
 
