@@ -11,7 +11,7 @@ app.use(cors({ origin: true, credentials: true }));
 // Adding headers
 app.use(function (req, res, next) {
 
-    // Website you wish to allow to connect
+    // Website you wish to allow to connect to localhost
     res.header('Access-Control-Allow-Origin', 'http://localhost:4200');
 
     // Request methods you wish to allow
