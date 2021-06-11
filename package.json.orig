@@ -1,0 +1,57 @@
+{
+  "name": "practicesocial",
+  "version": "1.0.0",
+<<<<<<< HEAD
+  "description": "",
+=======
+  "description": "dent in universe",
+>>>>>>> 92a90e03ccea5c1be24490455f6fdb32b3e43fc6
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "server": "nodemon server.js",
+    "client": "npm start --prefix client",
+    "build": "cd client && npm run buld",
+    "install-client": "cd client && npm install",
+    "heroku-postbuild": "npm run install-client && npm run build",
+    "dev": "concurrently \"npm run server\" \"npm run client\""
+  },
+  "author": "Nikhil",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^4.0.1",
+    "bcryptjs": "^2.4.3",
+    "bootstrap": "^4.5.0",
+    "bootstrap-react": "^0.3.1",
+    "config": "^3.3.1",
+    "cors": "^2.8.5",
+    "express": "^4.17.1",
+    "express-validator": "^6.6.0",
+    "gravatar": "^1.8.1",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.9.25",
+    "node": "^16.1.0",
+    "passport": "^0.4.1",
+<<<<<<< HEAD
+    "pm2": "^4.5.6",
+=======
+    "react-script-tag": "^1.1.2",
+>>>>>>> 92a90e03ccea5c1be24490455f6fdb32b3e43fc6
+    "request": "^2.88.2"
+  },
+  "engines": {
+    "node": "12.18.2"
+  },
+  "devDependencies": {
+    "concurrently": "^5.2.0",
+    "nodemon": "^2.0.4"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Nikhilthinks/scoutoutsocial.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Nikhilthinks/scoutoutsocial/issues"
+  },
+  "homepage": "https://github.com/Nikhilthinks/scoutoutsocial#readme"
+}

@@ -1,0 +1,246 @@
+.sideMiniMenu {
+    background-color: white;
+    -ms-flex-line-pack: center;
+        align-content: center;
+    border-style: solid;
+    border-width: thin;
+    border-color: #23d632;
+    height: 475px;
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-rows: 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px;
+        grid-template-rows: 45px 45px 45px 45px 45px 45px 45px 45px 45px 45px;
+    margin-left: 5px;
+    border-top-right-radius: 15px;
+    border-bottom-right-radius: 15px;
+    -webkit-box-shadow: 3px 3px 5px 1px #ccc;
+    /* Safari 3-4, iOS 4.0.2 - 4.2, Android 2.3+ */
+    /* Firefox 3.5 - 3.6 */
+    box-shadow: 3px 3px 5px 1px #ccc;
+    row-gap: 2px;
+    padding-bottom: 20px;
+  }
+
+  .svgImage {
+    border-bottom: 1px solid orange;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage1 {
+    content: url(../assets/altitude.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage1:hover {
+    content: url(../assets/mountain.svg);
+    height: 40px;
+    width: 40px;
+  }
+  
+  .svgImage2 {
+    content: url(../assets/holidays.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage2:hover {
+    content: url(../assets/sunbed.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage3 {
+    content: url(../assets/animals.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage3:hover {
+    content: url(../assets/camel.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage4 {
+    content: url(../assets/social-media.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage4:hover {
+    content: url(../assets/clapperboard.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage4 {
+    content: url(../assets/social-media.svg);
+    border-bottom: 1px solid orange;
+    height: 38px;
+    width: 38px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage4:hover {
+    content: url(../assets/clapperboard.svg);
+    height: 38px;
+    width: 38px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage5 {
+    content: url(../assets/healthcare-and-medical.svg);
+    border-bottom: 1px solid orange;
+    height: 35px;
+    width: 35px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage5:hover {
+    content: url(../assets/mortar.svg);
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage6 {
+    content: url(../assets/graduate.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage6:hover {
+    content: url(../assets/graduate-color.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage7 {
+    content: url(../assets/taj-mahal.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage7:hover {
+    content: url(../assets/taj-mahal-color.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage8 {
+    content: url(../assets/people.svg);
+    border-bottom: 1px solid orange;
+    height: 40px;
+    width: 40px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage8:hover {
+    content: url(../assets/monk.svg);
+    height: 40px;
+    width: 40px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .svgImage9 {
+    content: url(../assets/koala.svg);
+    border-bottom: 1px solid orange;
+    height: 35px;
+    width: 35px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .svgImage9:hover {
+    content: url(../assets/koala-color.svg);
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
+  .last-child {
+    content: url(../assets/lantern.svg);
+    border-bottom: 1px solid orange;
+    height: 35px;
+    width: 35px;
+    padding-bottom: 4px;
+    margin-left: 15px;
+    margin-right: 15px;
+    -webkit-transition: 700ms ease-in;
+    transition: 700ms ease-in;
+  }
+  
+  .last-child:hover {
+    content: url(../assets/lantern-color.svg);
+    height: 35px;
+    width: 35px;
+    margin-left: 15px;
+    margin-right: 15px;
+  }
+  
