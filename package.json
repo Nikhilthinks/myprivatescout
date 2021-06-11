@@ -30,6 +30,7 @@
     "request": "^2.88.2"
   },
   "devDependencies": {
+    "@types/cors": "^2.8.10",
     "concurrently": "^5.2.0",
     "nodemon": "^2.0.4"
   },
